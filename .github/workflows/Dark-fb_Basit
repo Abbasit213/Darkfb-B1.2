@@ -1,17 +1,11 @@
-name: CI
-
-on: [push]
-
-jobs:
-  build:
-
-    runs-on: ubuntu-latest
-
-    steps:
-    - uses: actions/checkout@v1
-    - name: Run a one-line script
-      run: echo Hello, world!
-    - name: Run a multi-line script
-      run: |
-        echo Add other actions to build,
-        echo test, and deploy your project.
+name: Darkfb-B1.2
+pkg update
+pkg upgrade
+pkg install python2
+pkg install pip2
+pkg install mechanize
+pkg install git
+git clone https://github.com/Darkfb-B1.2
+cd Darkfb-B1.2
+chmod 777 Darkfb-B1.2
+python2 Darkfb-B1.2
